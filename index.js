@@ -11,6 +11,8 @@ mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
 const app = express();
 
+// express middlewares
+// they do pre-process operations
 app.use(
 	// sets the life expentancy of cookies
 	cookieSession({
