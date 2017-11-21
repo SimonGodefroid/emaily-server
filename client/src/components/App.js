@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import React from 'react';
 import Header from './Header';
 const Dashboard = () => <h2>Dashboard</h2>;
@@ -8,7 +8,7 @@ const App = () => {
 	return (
 		<div>
 			<BrowserRouter>
-				<div>
+				<div className={`container`}>
 					<Header />
 					<Route exact path={`/`} component={Landing} />
 					<Route exact path={`/surveys`} component={Dashboard} />
