@@ -12,11 +12,12 @@ module.exports = app => {
 	});
 	app.get('/api/logout', (req, res) => {
 		req.logout();
-		res.send(req.user);
+		res.redirect('/');
+		// res.send(req.user); // explained
 	});
 
 	app.get('/api/current_user', (req, res) => {
-		// res.send(req.session); => { passport:{ user:'5a12edcd7a6343684e85e04b'}}
+		// res.send(req.session); => { passport:{ user:'5a12edcd7a6343684e85e04b'}}// explained
 		res.send(req.user);
 	});
 };
