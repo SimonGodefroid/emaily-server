@@ -1,4 +1,5 @@
 node_modules
+docs
 dev.js
 .env
 .jshintrc
