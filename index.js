@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
@@ -13,6 +14,7 @@ const app = express();
 
 // express middlewares
 // they do pre-process operations
+app.use(bodyParser.json());
 app.use(
 	// sets the life expentancy of cookies
 	cookieSession({
