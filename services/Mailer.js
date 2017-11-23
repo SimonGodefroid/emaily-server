@@ -7,7 +7,7 @@ class Mailer extends helper.Mail {
 	constructor({ subject, recipients }, content) {
 		super();
 
-		this.sgApi = sengrid(keys.sendGridKey);
+		this.sgApi = sendgrid(keys.sendGridKey);
 		this.from_email = new helper.Email('no-reply@emaily.com');
 		this.subject = subject;
 		this.body = new helper.Content('text/html', content);
@@ -26,7 +26,7 @@ class Mailer extends helper.Mail {
 		const trackingSettings = new helper.TrackingSettings();
 		const clickTracking = new helper.ClickTracking(true, true);
 
-		trackSettings.setClickTracking(clickTracking);
+		trackingSettings.setClickTracking(clickTracking);
 		this.addTrackingSettings(trackingSettings);
 	}
 	addRecipients() {

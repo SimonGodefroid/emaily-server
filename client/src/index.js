@@ -7,6 +7,10 @@ import reduxThunk from 'redux-thunk';
 
 import App from './components/App';
 import reducers from './reducers';
+// dev only axios helper
+import axios from 'axios';
+window.axios = axios;
+
 // store takes all the reducers and initial state
 
 // we create the redux store...
