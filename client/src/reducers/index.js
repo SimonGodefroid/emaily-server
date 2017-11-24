@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
 import authReducer from './authReducer';
-
+import { reducer as reduxForm } from 'redux-form';
 // the keys of this object will be the keys inside the state object
 export default combineReducers({
-	auth: authReducer
+	auth: authReducer,
+	form: reduxForm
 });
