@@ -51,5 +51,7 @@ function validate(values) {
 // handleSubmit comes from surveyForm
 export default reduxForm({
 	validate,
-	form: 'surveyForm'
+	form: 'surveyForm',
+	// keep values after unmount of the component
+	destroyOnUnmount: false
 })(SurveyForm);
